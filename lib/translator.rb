@@ -25,7 +25,7 @@ def get_english_meaning(path, emoticon)
   data.each do |key, value|
     if value[:japanese] == emoticon
       binding.pry
-      key
+      return key
     end
   end
 end
