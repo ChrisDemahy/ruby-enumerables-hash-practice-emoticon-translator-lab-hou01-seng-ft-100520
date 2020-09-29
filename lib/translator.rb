@@ -35,10 +35,10 @@ def get_english_meaning(path, emoticon)
   # Loops across the data to see if it matches any japenese or english emoticon
   data.each do |key, value|
     if value[:japanese] == emoticon || value[:english] == emoticon
-      #binding.pry
       # returns the name or meaning
       return key
     end
   end
+  # if the emoticon is not found a sorry message is returned ``
   return "Sorry, that emoticon was not found"
 end
