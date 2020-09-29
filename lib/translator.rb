@@ -19,18 +19,18 @@ def get_japanese_emoticon(path, emoticon)
   data = load_library(path)
   # Loop through all the data
   data.each do |key, value|
-    #if there is a match for the english emoticon then return the japanese variant 
+    #if there is a match for the english emoticon then return the japanese variant
     if value[:english] == emoticon
       return value[:japanese]
     end
   end
-  # if the emoticon is not found a sorry message is returned 
+  # if the emoticon is not found a sorry message is returned
   return "Sorry, that emoticon was not found"
 end
 
-# Get the english name or meaning for a japenese emoticon 
+# Get the english name or meaning for a japenese emoticon
 def get_english_meaning(path, emoticon)
-  # Load the data 
+  # Load the data
   data = load_library(path)
   # Loops across the data to see if it matches any japenese or english emoticon
   data.each do |key, value|
